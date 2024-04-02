@@ -11,7 +11,7 @@ const Card = ({ category, title, description, image, text_color }) => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <img src={image} alt="" className='absolute object-stretch h-full w-full z-0' />
-            <div className='z-50 p-5 w-[100%]'>
+            <div className='z-10 p-5 w-[100%]'>
                 <div className='text-sm font-thin'>{category}</div>
                 <div className='pt-2 text-lg '>{title}</div>
             </div>
