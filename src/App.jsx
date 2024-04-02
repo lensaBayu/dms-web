@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Homepage from "./Pages/Homepage"
-import Products from "./Pages/Products"
-// import ProBigData from "./Pages/Probigdata"
+import HRIS from "./Pages/HRIS"
+import Bigdata from "./Pages/Bigdata"
 
 function App() {
 
@@ -9,8 +9,8 @@ function App() {
     <div className="bg-black h-screen">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/products" element={<Products />} />
-        {/* <Route path="/probigdata" element={<ProBigData />} /> */}
+        <Route path="/product/hris" element={<HRIS />} />
+        <Route path="/product/bigdata" element={<Bigdata />} />
       </Routes>
     </div>
   )
