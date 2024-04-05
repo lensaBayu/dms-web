@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 const Navbar = ({ setShowOverlay }) => {
     const [showDropdown, setShowDropdown] = useState(null);
@@ -21,7 +20,7 @@ const Navbar = ({ setShowOverlay }) => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [showProduct, showWhoWeAre, showCareer]);
+    }, []);
 
     const toggleDropdown = (dropdownName) => {
         setShowDropdown(showDropdown === dropdownName ? null : dropdownName);
