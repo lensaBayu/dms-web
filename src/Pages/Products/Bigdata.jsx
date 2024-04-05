@@ -88,7 +88,7 @@ function Bigdata() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card8.png"}
+                        image={"/cards/card9.png"}
                         text_color={"text-black"} />
                 </div>
             </div>

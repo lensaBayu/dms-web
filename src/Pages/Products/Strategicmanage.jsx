@@ -13,8 +13,8 @@ function Strategicmanage() {
     return (
 
         <div className='bg-black relative  '>
-            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-10"></div>}
-            <nav className='absolute top-0 left-0 right-0 z-10'>
+            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-20"></div>}
+            <nav className='absolute top-0 left-0 right-0 z-20'>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
@@ -30,19 +30,19 @@ function Strategicmanage() {
                 <Dropdown
                     Number={"01"}
                     Title={"Enhanced Operational Efficiency"}
-                    percent={"40%"}
+                    percent={"+40%"}
                     description={"Achieve a leaner, more agile operation with our strategic approach, potentially increasing your efficiency by up to 40%"}
                 />
                 <Dropdown
                     Number={"02"}
                     Title={"Reduced IT Operational Costs"}
-                    percent={"35%"}
+                    percent={"+35%"}
                     description={"Cut through the complexity of IT operations to reduce costs by as much as 35%, enabling more strategic allocation of resources"}
                 />
                 <Dropdown
                     Number={"03"}
                     Title={"Proactive Strategic Planning"}
-                    percent={"100%"}
+                    percent={"+100%"}
                     description={"Stay ahead of the curve with data-driven insights and expert guidance, transforming potential challenges into opportunities for growth."}
                     border={false}
                 />
@@ -78,7 +78,7 @@ function Strategicmanage() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card8.png"}
+                        image={"/cards/card9.png"}
                         text_color={"text-black"} />
                 </div>
             </div>
@@ -87,7 +87,7 @@ function Strategicmanage() {
                 <img src="/ProductContent.png" alt="" />
                 <div className='grid place-content-end absolute inset-0 bottom-52 mr-10'>
                     <div className='w-[512px] h-[108px] text-zinc-300'>Designed to empower your organization with the tools and insights needed for effective human capital management. Let's leverage technology to transform your HR practices, driving success through strategic, data-driven human resource management</div>
-                    <div className='text-white'>Discuss now</div>
+                    <div className='text-white mt-3'>Discuss now</div>
                 </div>
             </div>
 

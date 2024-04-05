@@ -13,8 +13,8 @@ function Businessprocess() {
     return (
 
         <div className='bg-black relative  '>
-            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-10"></div>}
-            <nav className='absolute top-0 left-0 right-0 z-10'>
+            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-20"></div>}
+            <nav className='absolute top-0 left-0 right-0 z-20'>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
@@ -30,19 +30,19 @@ function Businessprocess() {
                 <Dropdown
                     Number={"01"}
                     Title={"Substantial Operational Efficiency Gains"}
-                    percent={"40%"}
+                    percent={"+40%"}
                     description={"Substantial Operational Efficiency Gains: Streamline and automate key business processes to boost efficiency by as much as 40%, allowing your team to focus on higher-value tasks."}
                 />
                 <Dropdown
                     Number={"02"}
                     Title={"Significant Reduction in Processing Costs"}
-                    percent={"50%"}
+                    percent={"+50%"}
                     description={"Through automation, reduce manual processing costs by up to 50%, optimizing your budget allocation for greater strategic impact."}
                 />
                 <Dropdown
                     Number={"03"}
-                    Title={"Enhanced Customer Satisfaction and Employee Engagement"}
-                    percent={"100%"}
+                    Title={"Enhanced Customer Satisfaction"}
+                    percent={""}
                     description={"Implement workflows that not only meet but exceed customer expectations while fostering a more engaged and productive workforce."}
                     border={false}
                 />
@@ -78,7 +78,7 @@ function Businessprocess() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card8.png"}
+                        image={"/cards/card9.png"}
                         text_color={"text-black"} />
                 </div>
             </div>
@@ -87,7 +87,7 @@ function Businessprocess() {
                 <img src="/ProductContent.png" alt="" />
                 <div className='grid place-content-end absolute inset-0 bottom-52 mr-10'>
                     <div className='w-[512px] h-[108px] text-zinc-300'>Designed to empower your organization with the tools and insights needed for effective human capital management. Let's leverage technology to transform your HR practices, driving success through strategic, data-driven human resource management</div>
-                    <div className='text-white'>Discuss now</div>
+                    <div className='text-white mt-3'>Discuss now</div>
                 </div>
             </div>
 

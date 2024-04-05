@@ -13,8 +13,8 @@ function Digitalengine() {
     return (
 
         <div className='bg-black relative  '>
-            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-10"></div>}
-            <nav className='absolute top-0 left-0 right-0 z-10'>
+            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-20"></div>}
+            <nav className='absolute top-0 left-0 right-0 z-20'>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
@@ -30,19 +30,19 @@ function Digitalengine() {
                 <Dropdown
                     Number={"01"}
                     Title={"Increased Production Efficiency"}
-                    percent={"20%"}
+                    percent={"+20%"}
                     description={"Streamline your production processes with our digital tools and data insights, potentially boosting your efficiency by up to 20%"}
                 />
                 <Dropdown
                     Number={"02"}
                     Title={"Reduced Operational Costs"}
-                    percent={"30%"}
+                    percent={"+30%"}
                     description={"Minimize waste and optimize resource allocation to cut operational costs by up to 30%, as evidenced by leading industry researchR"}
                 />
                 <Dropdown
                     Number={"03"}
                     Title={"Enhanced Customer Satisfaction"}
-                    percent={"25%"}
+                    percent={"+25%"}
                     description={"With improved product quality and quicker delivery times, enhance your customer satisfaction levels by up to 25%"}
                     border={false}
                 />
@@ -78,7 +78,7 @@ function Digitalengine() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card8.png"}
+                        image={"/cards/card9.png"}
                         text_color={"text-black"} />
                 </div>
             </div>
@@ -87,7 +87,7 @@ function Digitalengine() {
                 <img src="/ProductContent.png" alt="" />
                 <div className='grid place-content-end absolute inset-0 bottom-52 mr-10'>
                     <div className='w-[512px] h-[108px] text-zinc-300'>Designed to empower your organization with the tools and insights needed for effective human capital management. Let's leverage technology to transform your HR practices, driving success through strategic, data-driven human resource management</div>
-                    <div className='text-white'>Discuss now</div>
+                    <div className='text-white mt-3'>Discuss now</div>
                 </div>
             </div>
 

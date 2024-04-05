@@ -19,7 +19,7 @@ const Dropdown = ({ Number, Title, percent, description, border = true }) => {
                     <div className=''>
                         {isHovered ?
                             <div className={`${isHovered ? "opacity-100" : "opacity-0"} transition-opacity ease-in-out duration-500 grid-cols-2 h-[200px] grid place-content-center gap-32`}>
-                                <div className='text-[200px] font-normal'>{percent}</div>
+                                <div className='text-[200px] font-normal'> {percent}</div>
                                 <div className='grid place-content-center gap-5'>
                                     <div className='text-white font-medium text-lg'>{Title}</div>
                                     <div className='text-zinc-300'>{description}</div>

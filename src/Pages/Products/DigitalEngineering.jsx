@@ -40,7 +40,7 @@ function DigitalEngineering() {
                 <Dropdown
                     Number={"01"}
                     Title={"Increased Production Efficiency"}
-                    percent={"+20%"}
+                    percent={"22%"}
                     description={"Streamline your production processes with our digital tools and data insights, potentially boosting your efficiency by up to 20%."}
                 />
                 <Dropdown
@@ -88,7 +88,7 @@ function DigitalEngineering() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card8.png"}
+                        image={"/cards/card9.png"}
                         text_color={"text-black"} />
                 </div>
             </div>

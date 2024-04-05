@@ -1,43 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ setShowOverlay }) => {
-    const [showProduct, setShowProduct] = useState(false);
-    const [showWhoWeAre, setShowWhoWeAre] = useState(false);
-    const [showCareer, setShowCareer] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(null);
+
+    const dropdownRef = useRef(null);
 
     const handleClickOutside = (event) => {
-        const dropdown = document.getElementById('dropdown');
-        if (dropdown && !dropdown.contains(event.target)) {
-            setShowProduct(false);
-            setShowWhoWeAre(false);
-            setShowCareer(false);
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setShowDropdown(null);
             setShowOverlay(false);
         }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [showProduct, showWhoWeAre, showCareer]);
+    }, []);
 
-
-    const toggleDropdown1 = () => {
-        setShowProduct(!showProduct);
-        setShowOverlay(!showProduct);
-    };
-    const toggleDropdown2 = () => {
-        setShowWhoWeAre(!showWhoWeAre);
-        setShowOverlay(!showWhoWeAre);
-    };
-    const toggleDropdown3 = () => {
-        setShowCareer(!showCareer);
-        setShowOverlay(!showCareer);
+    const toggleDropdown = (dropdownName) => {
+        setShowDropdown(showDropdown === dropdownName ? null : dropdownName);
+        setShowOverlay(showDropdown !== dropdownName);
     };
 
     return (
@@ -51,7 +39,7 @@ const Navbar = ({ setShowOverlay }) => {
                 </Link>
                 <div className='flex gap-5 text-base'>
                     <div className='grid place-content-center cursor-pointer'>
-                        <div className='flex gap-1' onClick={toggleDropdown1}>
+                        <div className='flex gap-1' onClick={() => toggleDropdown('product')}>
                             <div>
                                 Product
                             </div>
@@ -59,7 +47,7 @@ const Navbar = ({ setShowOverlay }) => {
                         </div>
                     </div>
                     <div className='grid place-content-center cursor-pointer'>
-                        <div className='flex gap-1' onClick={toggleDropdown2}>
+                        <div className='flex gap-1' onClick={() => toggleDropdown('whoWeAre')}>
                             <div>
                                 Who we are
                             </div>
@@ -75,7 +63,7 @@ const Navbar = ({ setShowOverlay }) => {
                         </div>
                     </div>
                     <div className='grid place-content-center cursor-pointer'>
-                        <div className='flex gap-1' onClick={toggleDropdown3}>
+                        <div className='flex gap-1' onClick={() => toggleDropdown('career')}>
                             <div>
                                 Careers
                             </div>
@@ -88,10 +76,9 @@ const Navbar = ({ setShowOverlay }) => {
                     <img src="/Search.png" alt="" />
                 </button>
             </div>
-            {showProduct && (
-                <div
-                    id="dropdown"
-                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+
+            {showDropdown === 'product' && (
+                <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
                     <ul>
                         <Link to={"/product/digitalengine"}>
                             <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Digital Engineering & Manufacturing</li>
@@ -117,9 +104,9 @@ const Navbar = ({ setShowOverlay }) => {
                     </ul>
                 </div>
             )}
-            {showWhoWeAre && (
-                <div id="dropdown1"
-                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+
+            {showDropdown === 'whoWeAre' && (
+                <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
                     <ul>
                         <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">About Us</li>
                         <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Team</li>
@@ -129,9 +116,9 @@ const Navbar = ({ setShowOverlay }) => {
                     </ul>
                 </div>
             )}
-            {showCareer && (
-                <div id="dropdown2"
-                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+
+            {showDropdown === 'career' && (
+                <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
                     <ul>
                         <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Why DMS</li>
                         <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Job Openings</li>
@@ -139,8 +126,9 @@ const Navbar = ({ setShowOverlay }) => {
                     </ul>
                 </div>
             )}
+
         </>
     )
 }
 
-export default Navbar
+export default Navbar;
