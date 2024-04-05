@@ -7,8 +7,6 @@ import Changemanage from "./Pages/Products/Changemanage"
 import Businessprocess from "./Pages/Products/Businessprocess"
 import Strategicmanage from "./Pages/Products/Strategicmanage"
 import Techtrans from "./Pages/Products/Techtrans"
-import DigitalEngineering from "./Pages/Products/DigitalEngineering"
-import Automation from "./Pages/Products/Automation"
 
 function App() {
 
@@ -23,8 +21,6 @@ function App() {
         <Route path="/product/businessprocess" element={<Businessprocess />} />
         <Route path="/product/strategicmanage" element={<Strategicmanage />} />
         <Route path="/product/techtrans" element={<Techtrans />} />
-        {/* <Route path="/product/automation" element={<Automation />} /> */}
-        {/* <Route path="/product/digitalengineering" element={<DigitalEngineering />} /> */}
       </Routes>
     </div>
   )
