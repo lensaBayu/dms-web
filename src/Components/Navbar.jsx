@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ setShowOverlay }) => {
     const [showProduct, setShowProduct] = useState(false);
@@ -30,7 +31,9 @@ const Navbar = ({ setShowOverlay }) => {
     return (
         <>
             <div className='text-white flex justify-between mx-15 pt-7 pb-4'>
-                <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
+                <Link to={"/"}>
+                    <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
+                </Link>
                 <div className='flex gap-5 text-base'>
                     <div className='grid place-content-center '>
                         <div className='flex gap-1' onClick={toggleDropdown1}>
@@ -66,21 +69,55 @@ const Navbar = ({ setShowOverlay }) => {
                 </div>
                 <button className='grid place-content-center'>
                     {/* <IoIosSearch className=' text-2xl' /> */}
-                    <img src="./Search.png" alt="" />
+                    <img src="/Search.png" alt="" />
                 </button>
             </div>
             {showProduct && (
                 <div
                     id="dropdown"
-                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+                    className=' bg-teal-950 px-24 z-50 py-14 mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
                     <ul>
-                        <li className="py-2">Digital Engineering & Manufacturing</li>
-                        <li className="py-2">Strategic Managed Services</li>
-                        <li className="py-2">Business Process Automation</li>
-                        <li className="py-2">Big Data & Artificial Intelligence</li>
-                        <li className="py-2">Technology Transformation</li>
-                        <li className="py-2">Change Management</li>
-                        <li className="py-2">Human Resources Information System</li>
+                        <li className="py-2">
+                            <Link to={"/product/digitalengineering"}>
+                                <div className='inline-block'>
+                                    Digital Engineering & Manufacturing
+                                </div>
+                            </Link>
+                        </li>
+                        <li className="py-2">
+                            <div className='inline-block'>
+                                Strategic Managed Services
+                            </div>
+                        </li>
+                        <li className="py-2">
+                            <Link to={"/product/automation"}>
+                                <div className='inline-block'>
+                                    Business Process Automation
+                                </div>
+                            </Link>
+                        </li>
+                        <li className="py-2">
+                            <Link to={"/product/bigdata"}>
+                                <div className='inline-block'>
+                                    Big Data & Artificial Intelligence
+                                </div>
+                            </Link>
+                        </li>
+                        <li className="py-2">
+                            <div className='inline-block'>
+                                Technology Transformation
+                            </div>
+                        </li>
+                        <li className="py-2">
+                            <div className='inline-block'>
+                                Change Management
+                            </div>
+                        </li>
+                        <li className="py-2">
+                            <div className='inline-block'>
+                                Human Resources Information System
+                            </div>
+                        </li>
                     </ul>
                 </div>
             )}

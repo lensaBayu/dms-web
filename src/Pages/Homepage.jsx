@@ -10,8 +10,8 @@ function Homepage() {
 
     return (
         <div className='bg-black relative'>
-            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-10"></div>}
-            <nav className='absolute top-0 left-0 right-0 z-10'>
+            {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-20"></div>}
+            <nav className='absolute top-0 left-0 right-0 z-20'>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
@@ -91,17 +91,17 @@ function Homepage() {
                         {/* <div className=' text-white font-bold text-10xl z-50'>91%</div> */}
                     </div>
                     <div className='grid place-content-end h-[800px] w-[877px] relative'>
-                        <div className='bg-black w-full h-full absolute z-50 opacity-30'></div>
+                        <div className='bg-black w-full h-full absolute z-10 opacity-30'></div>
                         <img src="/image2.jpeg" alt="" className='absolute object-strech h-full w-full' />
-                        <div className=' text-white font-extralight text-7.5xl leading-none z-50 pb-10 pl-10 w-[80%]'>our clients are top-rated companies in Indonesia</div>
+                        <div className=' text-white font-extralight text-7.5xl leading-none z-10 pb-10 pl-10 w-[80%]'>our clients are top-rated companies in Indonesia</div>
                     </div>
                 </div>
                 <div className='flex'>
                     <div className='grid place-content-center h-[800px] w-[877px] relative'>
                         <img src="/image3.jpeg" alt="" className='absolute object-fill h-full w-full' />
-                        <div className='bg-black w-full h-full absolute z-50 opacity-30'></div>
+                        <div className='bg-black w-full h-full absolute z-10 opacity-30'></div>
 
-                        <div className=' text-white absolute left-0 top-1/2 font-medium transform -translate-y-1/2 pl-20  z-50 w-[700px] '>
+                        <div className=' text-white absolute left-0 top-1/2 font-medium transform -translate-y-1/2 pl-20  z-10 w-[700px] '>
                             <div className='text-7.5xl leading-none font-extralight'>of them believe our presence delivers ease to their business
                             </div>
                             <button className='mt-10 border bg-white text-black p-3 px-5 grid place-content-center'>See our impact</button>
