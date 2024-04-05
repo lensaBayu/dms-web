@@ -22,7 +22,7 @@ function Businessprocess() {
                 <Hero2
                     title="Business Process Automation"
                     description="In the era of digital transformation, Business Process Automation (BPA) stands out as a critical lever for streamlining operations, enhancing efficiency, and driving business innovation. According to a comprehensive study by Forrester, organizations that implement BPA solutions can expect to see an average increase in operational efficiency by up to 40%, coupled with a reduction in processing costs by up to 50%. This significant impact is further echoed by findings from IDC, which highlight that companies leveraging automation technologies not only achieve these efficiency gains but also see a marked improvement in customer satisfaction and employee engagement."
-                    image={"/Hero5.png"}
+                    image={"/Hero4.png"}
                 />
             </div>
 

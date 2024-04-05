@@ -7,7 +7,7 @@ const Hero2 = ({ image, title, description }) => {
                 <div>
                     <img src={image} alt="" />
                 </div>
-                <div className='flex place-content-end  font-helvetica-neue place-items-center absolute inset-0 text-neutral-100 text-[76px] font-normal leading-none'>
+                <div className='flex place-content-end  font-helvetica-neue place-items-center absolute inset-0 text-neutral-100 text-[72px] font-normal leading-[83.60px]'>
                     <div className='w-[982px]'>
                         {title}
                     </div>

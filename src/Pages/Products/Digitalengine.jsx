@@ -22,7 +22,7 @@ function Digitalengine() {
                 <Hero2
                     title="Digital Engineering & Manufacturing"
                     description="According to Gartner, companies that have adopted digital manufacturing strategies have seen up to a 20% increase in production efficiency, alongside a reduction in operational costs by as much as 30%. Furthermore, the integration of data analytics and ERP systems has been pivotal in achieving up to a 25% improvement in customer satisfaction due to enhanced product quality and faster delivery times."
-                    image={"/Hero4.png"}
+                    image={"/Hero5.png"}
                 />
             </div>
 
