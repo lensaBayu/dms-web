@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Hero2 from '../Components/Hero2';
-import Card from '../Components/Card';
-import Cardv2 from '../Components/Cardv2';
-import Dropdown from '../Components/Dropdown';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import Hero from '../../Components/Hero';
+import Hero2 from '../../Components/Hero2';
+import Card from '../../Components/Card';
+import Cardv2 from '../../Components/Cardv2';
+import Dropdown from '../../Components/Dropdown';
 
 
-function Strategicmanage() {
+function Techtrans() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -20,30 +20,30 @@ function Strategicmanage() {
 
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Strategic Managed Service"
-                    description="Navigating the complexities of the modern business environment requires not just innovation, but strategic foresight and precision execution. Our Strategic Managed Service solution embodies this approach, offering businesses a seamless integration of strategic planning and operational excellence. Leveraging the latest industry insights, such as those from Gartner, which highlight the pivotal role of strategic services in achieving up to a 40% increase in operational efficiency and a 35% reduction in IT operational costs, our service is designed to propel your business forward"
-                    image={"/Hero6.png"}
+                    title="Technology Transformation"
+                    description="In an era where technology rapidly reshapes the boundaries of what's possible, Technology Transformation emerges as the cornerstone for businesses aiming to thrive in a digital-first world. Drawing from insights by leading institutions such as McKinsey & Company, which underscores the significant value addition through digital transformation in operational efficiency and market competitiveness, and insights from Deloitte about the critical role of technology in enabling business resilience and innovation, it's evident that technology transformation is not just beneficial but essential for modern businesses."
+                    image={"/Hero7.png"}
                 />
             </div>
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Enhanced Operational Efficiency"}
-                    percent={"40%"}
-                    description={"Achieve a leaner, more agile operation with our strategic approach, potentially increasing your efficiency by up to 40%"}
+                    Title={"Accelerated Digital Innovation"}
+                    percent={"++"}
+                    description={"Propel your business forward with cutting-edge technologies that drive innovation, potentially increasing your market share and opening new revenue streams."}
                 />
                 <Dropdown
                     Number={"02"}
-                    Title={"Reduced IT Operational Costs"}
-                    percent={"35%"}
-                    description={"Cut through the complexity of IT operations to reduce costs by as much as 35%, enabling more strategic allocation of resources"}
+                    Title={"Enhanced Operational Efficiency"}
+                    percent={"40%"}
+                    description={" Implement smarter, technology-driven processes to boost your operational efficiency by up to 40%, as demonstrated by industry leaders, thereby reducing costs and improving service delivery."}
                 />
                 <Dropdown
                     Number={"03"}
-                    Title={"Proactive Strategic Planning"}
-                    percent={"100%"}
-                    description={"Stay ahead of the curve with data-driven insights and expert guidance, transforming potential challenges into opportunities for growth."}
+                    Title={"Strengthened Business Resilience"}
+                    percent={"++"}
+                    description={"Build a more resilient business capable of withstanding digital disruptions and adapting to market changes, ensuring long-term sustainability and growth"}
                     border={false}
                 />
             </div>
@@ -99,4 +99,4 @@ function Strategicmanage() {
     )
 }
 
-export default Strategicmanage
+export default Techtrans

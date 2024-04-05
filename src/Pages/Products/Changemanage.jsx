@@ -1,14 +1,13 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Hero2 from '../Components/Hero2';
-import Card from '../Components/Card';
-import Cardv2 from '../Components/Cardv2';
-import Dropdown from '../Components/Dropdown';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import Hero from '../../Components/Hero';
+import Hero2 from '../../Components/Hero2';
+import Card from '../../Components/Card';
+import Cardv2 from '../../Components/Cardv2';
+import Dropdown from '../../Components/Dropdown';
 
-
-function Techtrans() {
+function Changemanage() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -20,30 +19,24 @@ function Techtrans() {
 
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Technology Transformation"
-                    description="In an era where technology rapidly reshapes the boundaries of what's possible, Technology Transformation emerges as the cornerstone for businesses aiming to thrive in a digital-first world. Drawing from insights by leading institutions such as McKinsey & Company, which underscores the significant value addition through digital transformation in operational efficiency and market competitiveness, and insights from Deloitte about the critical role of technology in enabling business resilience and innovation, it's evident that technology transformation is not just beneficial but essential for modern businesses."
-                    image={"/Hero7.png"}
+                    title="Change Management"
+                    description="Navigating the complexities of organizational change requires a comprehensive, research-backed approach. Integrating insights from ten esteemed institutions, our Change Management solution embodies a holistic strategy designed to guide businesses through transformation with agility and resilience. These insights underscore the multifaceted nature of change management, highlighting its critical role in ensuring successful organizational adaptation and growth."
+                    image={"/Hero3.png"}
                 />
             </div>
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Accelerated Digital Innovation"}
-                    percent={"++"}
-                    description={"Propel your business forward with cutting-edge technologies that drive innovation, potentially increasing your market share and opening new revenue streams."}
+                    Title={""}
+                    percent={""}
+                    description={""}
                 />
                 <Dropdown
-                    Number={"02"}
-                    Title={"Enhanced Operational Efficiency"}
-                    percent={"40%"}
-                    description={" Implement smarter, technology-driven processes to boost your operational efficiency by up to 40%, as demonstrated by industry leaders, thereby reducing costs and improving service delivery."}
-                />
-                <Dropdown
-                    Number={"03"}
-                    Title={"Strengthened Business Resilience"}
-                    percent={"++"}
-                    description={"Build a more resilient business capable of withstanding digital disruptions and adapting to market changes, ensuring long-term sustainability and growth"}
+                    Number={""}
+                    Title={""}
+                    percent={""}
+                    description={""}
                     border={false}
                 />
             </div>
@@ -99,4 +92,4 @@ function Techtrans() {
     )
 }
 
-export default Techtrans
+export default Changemanage
