@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ setShowOverlay }) => {
     const [showProduct, setShowProduct] = useState(false);
+    const [showWhoWeAre, setShowWhoWeAre] = useState(false);
+    const [showCareer, setShowCareer] = useState(false);
 
     const handleClickOutside = (event) => {
         const dropdown = document.getElementById('dropdown');
         if (dropdown && !dropdown.contains(event.target)) {
             setShowProduct(false);
+            setShowWhoWeAre(false);
+            setShowCareer(false);
             setShowOverlay(false);
         }
     };
@@ -19,14 +24,21 @@ const Navbar = ({ setShowOverlay }) => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [showProduct, showWhoWeAre, showCareer]);
 
 
     const toggleDropdown1 = () => {
         setShowProduct(!showProduct);
         setShowOverlay(!showProduct);
     };
-
+    const toggleDropdown2 = () => {
+        setShowWhoWeAre(!showWhoWeAre);
+        setShowOverlay(!showWhoWeAre);
+    };
+    const toggleDropdown3 = () => {
+        setShowCareer(!showCareer);
+        setShowOverlay(!showCareer);
+    };
 
     return (
         <>
@@ -34,32 +46,36 @@ const Navbar = ({ setShowOverlay }) => {
                 <Link to={"/"}>
                     <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
                 </Link>
+                <Link to={"/"} >
+                    <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
+                </Link>
                 <div className='flex gap-5 text-base'>
-                    <div className='grid place-content-center '>
+                    <div className='grid place-content-center cursor-pointer'>
                         <div className='flex gap-1' onClick={toggleDropdown1}>
                             <div>
-                                Product                            </div>
+                                Product
+                            </div>
                             <div className='grid place-content-center text-xl'><RiArrowDownSLine /></div>
                         </div>
                     </div>
-                    <div className='grid place-content-center'>
-                        <div className='flex gap-1'>
+                    <div className='grid place-content-center cursor-pointer'>
+                        <div className='flex gap-1' onClick={toggleDropdown2}>
                             <div>
                                 Who we are
                             </div>
                             <div className='grid place-content-center text-xl'><RiArrowDownSLine /></div>
                         </div>
                     </div>
-                    <div className='grid place-content-center'>
+                    <div className='grid place-content-center cursor-pointer'>
                         <div className='flex gap-1'>
                             <div>
                                 What we think
                             </div>
-                            <div className='grid place-content-center text-xl'><RiArrowDownSLine /></div>
+                            <div className='grid place-content-center text-xl'></div>
                         </div>
                     </div>
-                    <div className='grid place-content-center'>
-                        <div className='flex gap-1'>
+                    <div className='grid place-content-center cursor-pointer'>
+                        <div className='flex gap-1' onClick={toggleDropdown3}>
                             <div>
                                 Careers
                             </div>
@@ -75,49 +91,51 @@ const Navbar = ({ setShowOverlay }) => {
             {showProduct && (
                 <div
                     id="dropdown"
-                    className=' bg-teal-950 px-24 z-50 py-14 mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
                     <ul>
-                        <li className="py-2">
-                            <Link to={"/product/digitalengineering"}>
-                                <div className='inline-block'>
-                                    Digital Engineering & Manufacturing
-                                </div>
-                            </Link>
-                        </li>
-                        <li className="py-2">
-                            <div className='inline-block'>
-                                Strategic Managed Services
-                            </div>
-                        </li>
-                        <li className="py-2">
-                            <Link to={"/product/automation"}>
-                                <div className='inline-block'>
-                                    Business Process Automation
-                                </div>
-                            </Link>
-                        </li>
-                        <li className="py-2">
-                            <Link to={"/product/bigdata"}>
-                                <div className='inline-block'>
-                                    Big Data & Artificial Intelligence
-                                </div>
-                            </Link>
-                        </li>
-                        <li className="py-2">
-                            <div className='inline-block'>
-                                Technology Transformation
-                            </div>
-                        </li>
-                        <li className="py-2">
-                            <div className='inline-block'>
-                                Change Management
-                            </div>
-                        </li>
-                        <li className="py-2">
-                            <div className='inline-block'>
-                                Human Resources Information System
-                            </div>
-                        </li>
+                        <Link to={"/product/digitalengine"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Digital Engineering & Manufacturing</li>
+                        </Link>
+                        <Link to={"/product/strategicmanage"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Strategic Managed Services</li>
+                        </Link>
+                        <Link to={"/product/businessprocess"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Business Process Automation</li>
+                        </Link>
+                        <Link to={"/product/bigdata"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Big Data & Artificial Intelligence</li>
+                        </Link>
+                        <Link to={"/product/techtrans"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Technology Transformation</li>
+                        </Link>
+                        <Link to={"/product/changemanage"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Change Management</li>
+                        </Link>
+                        <Link to={"/product/hris"}>
+                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Human Resources Information System</li>
+                        </Link>
+                    </ul>
+                </div>
+            )}
+            {showWhoWeAre && (
+                <div id="dropdown1"
+                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+                    <ul>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">About Us</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Team</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Culture</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Impact</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Partners</li>
+                    </ul>
+                </div>
+            )}
+            {showCareer && (
+                <div id="dropdown2"
+                    className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+                    <ul>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Why DMS</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Job Openings</li>
+                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Internship Program</li>
                     </ul>
                 </div>
             )}
