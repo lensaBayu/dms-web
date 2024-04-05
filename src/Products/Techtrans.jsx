@@ -8,7 +8,7 @@ import Cardv2 from '../Components/Cardv2';
 import Dropdown from '../Components/Dropdown';
 
 
-function Bigdata() {
+function Techtrans() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -18,42 +18,32 @@ function Bigdata() {
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
-            {/* <div className='pt-16 mx-15'>
-                <Hero
-                    title="Big Data & Artificial Inteligence"
-                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
-                    imageSrc="/Hero2.png"
-                />
-            </div> */}
-
-
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Big Data & Artificial Inteligence"
-                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
-                    image={"/Hero2.png"}
+                    title="Technology Transformation"
+                    description="In an era where technology rapidly reshapes the boundaries of what's possible, Technology Transformation emerges as the cornerstone for businesses aiming to thrive in a digital-first world. Drawing from insights by leading institutions such as McKinsey & Company, which underscores the significant value addition through digital transformation in operational efficiency and market competitiveness, and insights from Deloitte about the critical role of technology in enabling business resilience and innovation, it's evident that technology transformation is not just beneficial but essential for modern businesses."
+                    image={"/Hero7.png"}
                 />
             </div>
-
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Enhanced recruitment processes"}
-                    percent={"+50%"}
-                    description={"AI-driven analytics provide deeper insights into candidate pools, improving the quality and fit of new hires by up to 50%, as evidenced by industry research."}
+                    Title={"Accelerated Digital Innovation"}
+                    percent={"++"}
+                    description={"Propel your business forward with cutting-edge technologies that drive innovation, potentially increasing your market share and opening new revenue streams."}
                 />
                 <Dropdown
                     Number={"02"}
-                    Title={"Increased employee retention"}
-                    percent={"+20%"}
-                    description={"Big Data analytics enable personalized employee engagement strategies, reducing turnover rates by as much as 20% and increasing employee satisfaction significantly."}
+                    Title={"Enhanced Operational Efficiency"}
+                    percent={"40%"}
+                    description={" Implement smarter, technology-driven processes to boost your operational efficiency by up to 40%, as demonstrated by industry leaders, thereby reducing costs and improving service delivery."}
                 />
                 <Dropdown
                     Number={"03"}
-                    Title={"Optimized HR Operations"}
-                    percent={"+30%"}
-                    description={"AI and Big Data facilitate more informed decisions regarding talent management, workforce planning, and organizational development, enhancing operational efficiency by over 30%."}
+                    Title={"Strengthened Business Resilience"}
+                    percent={"++"}
+                    description={"Build a more resilient business capable of withstanding digital disruptions and adapting to market changes, ensuring long-term sustainability and growth"}
                     border={false}
                 />
             </div>
@@ -109,4 +99,4 @@ function Bigdata() {
     )
 }
 
-export default Bigdata
+export default Techtrans
