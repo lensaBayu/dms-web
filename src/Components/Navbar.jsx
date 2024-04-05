@@ -2,15 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 const Navbar = ({ setShowOverlay }) => {
     const [showDropdown, setShowDropdown] = useState(null);
 
     const dropdownRef = useRef(null);
-
-
-
 
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -34,9 +30,6 @@ const Navbar = ({ setShowOverlay }) => {
     return (
         <>
             <div className='text-white flex justify-between mx-15 pt-7 pb-4'>
-                <Link to={"/"}>
-                    <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
-                </Link>
                 <Link to={"/"} >
                     <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
                 </Link>
