@@ -18,15 +18,6 @@ function Bigdata() {
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
-            {/* <div className='pt-16 mx-15'>
-                <Hero
-                    title="Big Data & Artificial Inteligence"
-                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
-                    imageSrc="/Hero2.png"
-                />
-            </div> */}
-
-
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
                     title="Big Data & Artificial Inteligence"
