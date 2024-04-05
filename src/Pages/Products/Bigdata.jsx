@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Hero2 from '../Components/Hero2';
-import Card from '../Components/Card';
-import Cardv2 from '../Components/Cardv2';
-import Dropdown from '../Components/Dropdown';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import Hero from '../../Components/Hero';
+import Hero2 from '../../Components/Hero2';
+import Card from '../../Components/Card';
+import Cardv2 from '../../Components/Cardv2';
+import Dropdown from '../../Components/Dropdown';
 
 
-function Businessprocess() {
+function Bigdata() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -20,30 +20,31 @@ function Businessprocess() {
 
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Business Process Automation"
-                    description="In the era of digital transformation, Business Process Automation (BPA) stands out as a critical lever for streamlining operations, enhancing efficiency, and driving business innovation. According to a comprehensive study by Forrester, organizations that implement BPA solutions can expect to see an average increase in operational efficiency by up to 40%, coupled with a reduction in processing costs by up to 50%. This significant impact is further echoed by findings from IDC, which highlight that companies leveraging automation technologies not only achieve these efficiency gains but also see a marked improvement in customer satisfaction and employee engagement."
-                    image={"/Hero5.png"}
+                    title="Big Data & Artificial Inteligence"
+                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
+                    image={"/Hero2.png"}
                 />
             </div>
+
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Substantial Operational Efficiency Gains"}
-                    percent={"40%"}
-                    description={"Substantial Operational Efficiency Gains: Streamline and automate key business processes to boost efficiency by as much as 40%, allowing your team to focus on higher-value tasks."}
+                    Title={"Enhanced recruitment processes"}
+                    percent={"+50%"}
+                    description={"AI-driven analytics provide deeper insights into candidate pools, improving the quality and fit of new hires by up to 50%, as evidenced by industry research"}
                 />
                 <Dropdown
                     Number={"02"}
-                    Title={"Significant Reduction in Processing Costs"}
-                    percent={"50%"}
-                    description={"Through automation, reduce manual processing costs by up to 50%, optimizing your budget allocation for greater strategic impact."}
+                    Title={"Increased employee retention"}
+                    percent={"+20%"}
+                    description={"Big Data analytics enable personalized employee engagement strategies, reducing turnover rates by as much as 20% and increasing employee satisfaction significantly."}
                 />
                 <Dropdown
                     Number={"03"}
-                    Title={"Enhanced Customer Satisfaction and Employee Engagement"}
-                    percent={"100%"}
-                    description={"Implement workflows that not only meet but exceed customer expectations while fostering a more engaged and productive workforce."}
+                    Title={"Optimized HR Operations"}
+                    percent={"+30%"}
+                    description={"AI and Big Data facilitate more informed decisions regarding talent management, workforce planning, and organizational development, enhancing operational efficiency by over 30%."}
                     border={false}
                 />
             </div>
@@ -99,4 +100,4 @@ function Businessprocess() {
     )
 }
 
-export default Businessprocess
+export default Bigdata

@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Hero2 from '../Components/Hero2';
-import Card from '../Components/Card';
-import Cardv2 from '../Components/Cardv2';
-import Dropdown from '../Components/Dropdown';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import Hero from '../../Components/Hero';
+import Hero2 from '../../Components/Hero2';
+import Card from '../../Components/Card';
+import Cardv2 from '../../Components/Cardv2';
+import Dropdown from '../../Components/Dropdown';
 
 
-function Changemanage() {
+function Businessprocess() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -20,24 +20,30 @@ function Changemanage() {
 
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Change Management"
-                    description="Navigating the complexities of organizational change requires a comprehensive, research-backed approach. Integrating insights from ten esteemed institutions, our Change Management solution embodies a holistic strategy designed to guide businesses through transformation with agility and resilience. These insights underscore the multifaceted nature of change management, highlighting its critical role in ensuring successful organizational adaptation and growth."
-                    image={"/Hero3.png"}
+                    title="Business Process Automation"
+                    description="In the era of digital transformation, Business Process Automation (BPA) stands out as a critical lever for streamlining operations, enhancing efficiency, and driving business innovation. According to a comprehensive study by Forrester, organizations that implement BPA solutions can expect to see an average increase in operational efficiency by up to 40%, coupled with a reduction in processing costs by up to 50%. This significant impact is further echoed by findings from IDC, which highlight that companies leveraging automation technologies not only achieve these efficiency gains but also see a marked improvement in customer satisfaction and employee engagement."
+                    image={"/Hero5.png"}
                 />
             </div>
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={""}
-                    percent={""}
-                    description={""}
+                    Title={"Substantial Operational Efficiency Gains"}
+                    percent={"40%"}
+                    description={"Substantial Operational Efficiency Gains: Streamline and automate key business processes to boost efficiency by as much as 40%, allowing your team to focus on higher-value tasks."}
                 />
                 <Dropdown
-                    Number={""}
-                    Title={""}
-                    percent={""}
-                    description={""}
+                    Number={"02"}
+                    Title={"Significant Reduction in Processing Costs"}
+                    percent={"50%"}
+                    description={"Through automation, reduce manual processing costs by up to 50%, optimizing your budget allocation for greater strategic impact."}
+                />
+                <Dropdown
+                    Number={"03"}
+                    Title={"Enhanced Customer Satisfaction and Employee Engagement"}
+                    percent={"100%"}
+                    description={"Implement workflows that not only meet but exceed customer expectations while fostering a more engaged and productive workforce."}
                     border={false}
                 />
             </div>
@@ -93,4 +99,4 @@ function Changemanage() {
     )
 }
 
-export default Changemanage
+export default Businessprocess

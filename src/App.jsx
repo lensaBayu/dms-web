@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom"
 import Homepage from "./Pages/Homepage"
-import HRIS from "./Products/HRIS"
-import Bigdata from "./Products/Bigdata"
-import Digitalengine from "./Products/Digitalengine"
-import Changemanage from "./Products/Changemanage"
-import Businessprocess from "./Products/Businessprocess"
-import Strategicmanage from "./Products/Strategicmanage"
-import Techtrans from "./Products/Techtrans"
+import HRIS from "./Pages/Products/HRIS"
+import Bigdata from "./Pages/Products/Bigdata"
+import Digitalengine from "./Pages/Products/Digitalengine"
+import Changemanage from "./Pages/Products/Changemanage"
+import Businessprocess from "./Pages/Products/Businessprocess"
+import Strategicmanage from "./Pages/Products/Strategicmanage"
+import Techtrans from "./Pages/Products/Techtrans"
 
 function App() {
 

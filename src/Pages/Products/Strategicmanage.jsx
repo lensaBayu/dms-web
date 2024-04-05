@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Hero2 from '../Components/Hero2';
-import Card from '../Components/Card';
-import Cardv2 from '../Components/Cardv2';
-import Dropdown from '../Components/Dropdown';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import Hero from '../../Components/Hero';
+import Hero2 from '../../Components/Hero2';
+import Card from '../../Components/Card';
+import Cardv2 from '../../Components/Cardv2';
+import Dropdown from '../../Components/Dropdown';
 
 
-function Bigdata() {
+function Strategicmanage() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -20,31 +20,30 @@ function Bigdata() {
 
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Big Data & Artificial Inteligence"
-                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
-                    image={"/Hero2.png"}
+                    title="Strategic Managed Service"
+                    description="Navigating the complexities of the modern business environment requires not just innovation, but strategic foresight and precision execution. Our Strategic Managed Service solution embodies this approach, offering businesses a seamless integration of strategic planning and operational excellence. Leveraging the latest industry insights, such as those from Gartner, which highlight the pivotal role of strategic services in achieving up to a 40% increase in operational efficiency and a 35% reduction in IT operational costs, our service is designed to propel your business forward"
+                    image={"/Hero6.png"}
                 />
             </div>
-
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Enhanced recruitment processes"}
-                    percent={"+50%"}
-                    description={"AI-driven analytics provide deeper insights into candidate pools, improving the quality and fit of new hires by up to 50%, as evidenced by industry research"}
+                    Title={"Enhanced Operational Efficiency"}
+                    percent={"40%"}
+                    description={"Achieve a leaner, more agile operation with our strategic approach, potentially increasing your efficiency by up to 40%"}
                 />
                 <Dropdown
                     Number={"02"}
-                    Title={"Increased employee retention"}
-                    percent={"+20%"}
-                    description={"Big Data analytics enable personalized employee engagement strategies, reducing turnover rates by as much as 20% and increasing employee satisfaction significantly."}
+                    Title={"Reduced IT Operational Costs"}
+                    percent={"35%"}
+                    description={"Cut through the complexity of IT operations to reduce costs by as much as 35%, enabling more strategic allocation of resources"}
                 />
                 <Dropdown
                     Number={"03"}
-                    Title={"Optimized HR Operations"}
-                    percent={"+30%"}
-                    description={"AI and Big Data facilitate more informed decisions regarding talent management, workforce planning, and organizational development, enhancing operational efficiency by over 30%."}
+                    Title={"Proactive Strategic Planning"}
+                    percent={"100%"}
+                    description={"Stay ahead of the curve with data-driven insights and expert guidance, transforming potential challenges into opportunities for growth."}
                     border={false}
                 />
             </div>
@@ -100,4 +99,4 @@ function Bigdata() {
     )
 }
 
-export default Bigdata
+export default Strategicmanage
