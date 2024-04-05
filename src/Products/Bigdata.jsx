@@ -32,7 +32,7 @@ function Bigdata() {
                     Number={"01"}
                     Title={"Enhanced recruitment processes"}
                     percent={"+50%"}
-                    description={"AI-driven analytics provide deeper insights into candidate pools, improving the quality and fit of new hires by up to 50%, as evidenced by industry research."}
+                    description={"AI-driven analytics provide deeper insights into candidate pools, improving the quality and fit of new hires by up to 50%, as evidenced by industry research"}
                 />
                 <Dropdown
                     Number={"02"}
