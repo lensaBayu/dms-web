@@ -9,6 +9,9 @@ const Navbar = ({ setShowOverlay }) => {
 
     const dropdownRef = useRef(null);
 
+
+
+
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
             setShowDropdown(null);
