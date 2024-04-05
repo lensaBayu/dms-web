@@ -8,7 +8,7 @@ import Cardv2 from '../../Components/Cardv2';
 import Dropdown from '../../Components/Dropdown';
 
 
-function Digitalengine() {
+function DigitalEngineering() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
@@ -18,6 +18,15 @@ function Digitalengine() {
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
+            {/* <div className='pt-16 mx-15'>
+                <Hero
+                    title="Big Data & Artificial Inteligence"
+                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
+                    imageSrc="/Hero2.png"
+                />
+            </div> */}
+
+
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
                     title="Digital Engineering & Manufacturing"
@@ -26,24 +35,25 @@ function Digitalengine() {
                 />
             </div>
 
+
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
                     Title={"Increased Production Efficiency"}
-                    percent={"+20%"}
-                    description={"Streamline your production processes with our digital tools and data insights, potentially boosting your efficiency by up to 20%"}
+                    percent={"22%"}
+                    description={"Streamline your production processes with our digital tools and data insights, potentially boosting your efficiency by up to 20%."}
                 />
                 <Dropdown
                     Number={"02"}
                     Title={"Reduced Operational Costs"}
                     percent={"+30%"}
-                    description={"Minimize waste and optimize resource allocation to cut operational costs by up to 30%, as evidenced by leading industry researchR"}
+                    description={"Minimize waste and optimize resource allocation to cut operational costs by up to 30%, as evidenced by leading industry research."}
                 />
                 <Dropdown
                     Number={"03"}
                     Title={"Enhanced Customer Satisfaction"}
                     percent={"+25%"}
-                    description={"With improved product quality and quicker delivery times, enhance your customer satisfaction levels by up to 25%"}
+                    description={"With improved product quality and quicker delivery times, enhance your customer satisfaction levels by up to 25%."}
                     border={false}
                 />
             </div>
@@ -99,4 +109,4 @@ function Digitalengine() {
     )
 }
 
-export default Digitalengine
+export default DigitalEngineering

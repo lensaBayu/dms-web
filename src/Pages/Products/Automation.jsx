@@ -8,42 +8,52 @@ import Cardv2 from '../../Components/Cardv2';
 import Dropdown from '../../Components/Dropdown';
 
 
-function Digitalengine() {
+function Automation() {
     const [showOverlay, setShowOverlay] = React.useState(false);
     return (
 
         <div className='bg-black relative  '>
             {showOverlay && <div className="fixed inset-0 bg-black opacity-50 z-20"></div>}
-            <nav className='absolute top-0 left-0 right-0 z-20'>
+            <nav className='absolute top-0 left-0 right-0 z-30'>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
 
+            {/* <div className='pt-16 mx-15'>
+                <Hero
+                    title="Big Data & Artificial Inteligence"
+                    description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
+                    imageSrc="/Hero2.png"
+                />
+            </div> */}
+
+
             <div className='h-[625px] mx-15 pt-32'>
                 <Hero2
-                    title="Digital Engineering & Manufacturing"
-                    description="According to Gartner, companies that have adopted digital manufacturing strategies have seen up to a 20% increase in production efficiency, alongside a reduction in operational costs by as much as 30%. Furthermore, the integration of data analytics and ERP systems has been pivotal in achieving up to a 25% improvement in customer satisfaction due to enhanced product quality and faster delivery times."
-                    image={"/Hero5.png"}
+                    title="Business Process Automation"
+                    description="In the era of digital transformation, Business Process Automation (BPA) stands out as a critical lever for streamlining operations, enhancing efficiency, and driving business innovation. According to a comprehensive study by Forrester, organizations that implement BPA solutions can expect to see an average increase in operational efficiency by up to 40%, coupled with a reduction in processing costs by up to 50%. This significant impact is further echoed by findings from IDC, which highlight that companies leveraging automation technologies not only achieve these efficiency gains but also see a marked improvement in customer satisfaction and employee engagement."
+                    image={"/Hero4.png"}
                 />
             </div>
+
 
             <div className='mx-15 mt-72'>
                 <Dropdown
                     Number={"01"}
-                    Title={"Increased Production Efficiency"}
-                    percent={"+20%"}
-                    description={"Streamline your production processes with our digital tools and data insights, potentially boosting your efficiency by up to 20%"}
+                    Title={"Substantial operational efficiency gains"}
+                    percent={"+40%"}
+                    description={"Streamline and automate key business processes to boost efficiency by as much as 40%, allowing your team to focus on higher-value tasks."}
                 />
                 <Dropdown
                     Number={"02"}
-                    Title={"Reduced Operational Costs"}
-                    percent={"+30%"}
-                    description={"Minimize waste and optimize resource allocation to cut operational costs by up to 30%, as evidenced by leading industry researchR"}
+                    Title={"Significant Reduction in Processing Costs"}
+                    percent={"+50%"}
+                    description={"Through automation, reduce manual processing costs by up to 50%, optimizing your budget allocation for greater strategic impact."}
                 />
                 <Dropdown
                     Number={"03"}
                     Title={"Enhanced Customer Satisfaction"}
-                    percent={"+25%"}
-                    description={"With improved product quality and quicker delivery times, enhance your customer satisfaction levels by up to 25%"}
+                    percent={"+%"}
+                    description={"Implement workflows that not only meet but exceed customer expectations while fostering a more engaged and productive workforce."}
                     border={false}
                 />
             </div>
@@ -78,7 +88,7 @@ function Digitalengine() {
                         category={"INSIGHT"}
                         title={"How to tackle digital transformation issues with change management"}
                         description={"How to tackle digital transformation issues with change management"}
-                        image={"/cards/card9.png"}
+                        image={"/cards/card8.png"}
                         text_color={"text-black"} />
                 </div>
             </div>
@@ -99,4 +109,4 @@ function Digitalengine() {
     )
 }
 
-export default Digitalengine
+export default Automation
