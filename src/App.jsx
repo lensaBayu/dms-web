@@ -21,6 +21,8 @@ function App() {
         <Route path="/product/businessprocess" element={<Businessprocess />} />
         <Route path="/product/strategicmanage" element={<Strategicmanage />} />
         <Route path="/product/techtrans" element={<Techtrans />} />
+        <Route path="/product/automation" element={<Automation />} />
+        <Route path="/product/digitalengineering" element={<DigitalEngineering />} />
       </Routes>
     </div>
   )
