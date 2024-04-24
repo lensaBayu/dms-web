@@ -10,6 +10,19 @@ import Dropdown from '../../Components/Dropdown';
 
 function Businessprocess() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
 
         <div className='bg-black relative  '>
@@ -23,10 +36,13 @@ function Businessprocess() {
                     title="Business Process Automation"
                     description="In the era of digital transformation, Business Process Automation (BPA) stands out as a critical lever for streamlining operations, enhancing efficiency, and driving business innovation. According to a comprehensive study by Forrester, organizations that implement BPA solutions can expect to see an average increase in operational efficiency by up to 40%, coupled with a reduction in processing costs by up to 50%. This significant impact is further echoed by findings from IDC, which highlight that companies leveraging automation technologies not only achieve these efficiency gains but also see a marked improvement in customer satisfaction and employee engagement."
                     image={"/Hero4.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
 
-            <div className='mx-15 mt-72'>
+            <div className='h-[180px]'></div>
+
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Substantial Operational Efficiency Gains"}

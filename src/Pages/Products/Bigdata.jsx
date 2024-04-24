@@ -10,6 +10,19 @@ import Dropdown from '../../Components/Dropdown';
 
 function Bigdata() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
 
         <div className='bg-black relative  '>
@@ -23,11 +36,13 @@ function Bigdata() {
                     title="Big Data & Artificial Inteligence"
                     description="In today's data-driven world, Big Data and Artificial Intelligence (AI) have emerged as transformative forces, especially in the realm of Human Resources (HR). Leveraging insights from renowned institutions such as MIT Sloan Management Review, which emphasizes the role of AI in enhancing decision-making and operational efficiency, and Harvard Business Review's analysis on Big Data's impact on HR practices, it's clear that these technologies offer unprecedented opportunities for innovation and strategic management within HR functions."
                     image={"/Hero2.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
 
+            <div className='h-[180px]'></div>
 
-            <div className='mx-15 mt-72'>
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Enhanced recruitment processes"}
