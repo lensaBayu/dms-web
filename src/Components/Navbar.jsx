@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = ({ setShowOverlay }) => {
     const [showDropdown, setShowDropdown] = useState(null);
@@ -10,9 +11,13 @@ const Navbar = ({ setShowOverlay }) => {
 
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(null);
-            setShowOverlay(false);
+            closeDropdown();
         }
+    };
+
+    const closeDropdown = () => {
+        setShowDropdown(null);
+        setShowOverlay(false);
     };
 
     useEffect(() => {
@@ -23,8 +28,13 @@ const Navbar = ({ setShowOverlay }) => {
     }, []);
 
     const toggleDropdown = (dropdownName) => {
-        setShowDropdown(showDropdown === dropdownName ? null : dropdownName);
-        setShowOverlay(showDropdown !== dropdownName);
+        if (showDropdown === dropdownName) {
+            closeDropdown();
+        } else {
+            closeDropdown(); // Tutup dropdown sebelum menampilkan yang baru
+            setShowDropdown(dropdownName);
+            setShowOverlay(true);
+        }
     };
 
     return (
@@ -53,7 +63,7 @@ const Navbar = ({ setShowOverlay }) => {
                     <div className='grid place-content-center cursor-pointer'>
                         <div className='flex gap-1'>
                             <div>
-                                What we think
+                                Insight
                             </div>
                             <div className='grid place-content-center text-xl'></div>
                         </div>
@@ -73,45 +83,65 @@ const Navbar = ({ setShowOverlay }) => {
                 </button>
             </div>
 
-            {showDropdown === 'product' && (
-                <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
-                    <ul>
+            <AnimatePresence>
+                {showDropdown === 'product' && (
+                    <motion.div
+                        ref={dropdownRef}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3, ease: "easeIn" }}
+                        className=' bg-white bg-opacity-20 px-24 py-14 grid grid-cols-4  mt-5 text-white font-thin backdrop-blur-2xl gap-10'
+                    >
                         <Link to={"/product/digitalengine"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Digital Engineering & Manufacturing</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Digital Engineering & Manufacturing</div>
                         </Link>
                         <Link to={"/product/strategicmanage"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Strategic Managed Services</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Strategic Managed Services</div>
                         </Link>
                         <Link to={"/product/businessprocess"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Business Process Automation</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Business Process Automation</div>
                         </Link>
                         <Link to={"/product/bigdata"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Big Data & Artificial Intelligence</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Big Data & Artificial Intelligence</div>
                         </Link>
                         <Link to={"/product/techtrans"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Technology Transformation</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Technology Transformation</div>
                         </Link>
                         <Link to={"/product/changemanage"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Change Management</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Change Management</div>
                         </Link>
                         <Link to={"/product/hris"}>
-                            <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Human Resources Information System</li>
+                            <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">Human Resources Information System</div>
                         </Link>
-                    </ul>
-                </div>
-            )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
-            {showDropdown === 'whoWeAre' && (
-                <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
-                    <ul>
-                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">About Us</li>
-                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Team</li>
-                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Culture</li>
-                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Impact</li>
-                        <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Partners</li>
-                    </ul>
-                </div>
-            )}
+            <AnimatePresence>
+                {showDropdown === 'whoWeAre' && (
+                    <motion.div
+                        ref={dropdownRef}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3, ease: "easeIn" }}
+                        className=' bg-white bg-opacity-20 px-24 py-14 grid grid-cols-4  mt-5 text-white font-thin backdrop-blur-2xl gap-10'
+                    >
+                        <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
+                            <ul>
+                                <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">About Us</li>
+                                <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Team</li>
+                                <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Culture</li>
+                                <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Impact</li>
+                                <li className="py-2 hover:bg-zinc-500 hover:text-black cursor-pointer duration-200">Our Partners</li>
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                )}
+            </AnimatePresence>
+
 
             {showDropdown === 'career' && (
                 <div ref={dropdownRef} className=' bg-teal-950 px-24 py-14  mt-5 text-white font-thin bg-opacity-30 backdrop-blur-3xl'>
@@ -122,7 +152,6 @@ const Navbar = ({ setShowOverlay }) => {
                     </ul>
                 </div>
             )}
-
         </>
     )
 }

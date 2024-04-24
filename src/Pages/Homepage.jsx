@@ -1,12 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import Card from '../Components/Card';
 import Cardv2 from '../Components/Cardv2';
+import { motion, useAnimation } from 'framer-motion';
 
 
 function Homepage() {
     const [showOverlay, setShowOverlay] = useState(false);
+    const cardSectionRef = useRef(null);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const { current: cardSection } = cardSectionRef;
+            if (cardSection) {
+                const topOffset = cardSection.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (topOffset < windowHeight * 0.8) {
+                    controls.start("visible");
+                } else {
+                    controls.start("hidden");
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [controls]);
 
     return (
         <div className='bg-black relative'>
@@ -24,63 +45,74 @@ function Homepage() {
                 </div>
             </div>
 
-            <div className=' mt-36 mb-48 mx-15 grid grid-cols-4 gap-3'>
-                <div className='grid place-content-center'>
-                    <Card
-                        category={"INSIGHT"}
-                        title={"Old World vs New World"}
-                        description={"Discover how application and data reporting used to be and how it could be"}
-                        image={"cards/card1.png"}
-                        text_color={"text-white"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Cardv2
-                        category={"INSIGHT"}
-                        title={"The Foundation for Insight Driven Organizations"}
-                        description={"Learn how we build the basic to build for today and build for tomorrow"}
-                        image={"cards/card8.png"}
-                        text_color={"text-black"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Card
-                        category={"INDEPENDENT CASE STUDY"}
-                        title={"Discover how Optik Melawai develop their business insight"}
-                        description={"Discover how Optik Melawai develop their business insight"}
-                        image={"cards/card3.png"}
-                        text_color={"text-black"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Cardv2
-                        category={"INSIGHT"}
-                        title={"How to tackle digital transformation issues with change management"}
-                        description={"How to tackle digital transformation issues with change management"}
-                        image={"cards/card9.png"}
-                        text_color={"text-black"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Card
-                        category={"INSIGHT"}
-                        title={"Let’s visualize traditional AI/ML & Generative AI use case in HR Industry"}
-                        description={"Let’s visualize traditional AI/ML & Generative AI use case in HR Industry"}
-                        image={"cards/card5.png"}
-                        text_color={"text-black"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Card
-                        category={"INDEPENDENT CASE STUDY"}
-                        title={"Learn how we use automation to automate all of our HR Process"}
-                        description={"Learn how we use automation to automate all of our HR Process"}
-                        image={"cards/card6.png"}
-                        text_color={"text-white"} />
-                </div>
-                <div className='grid place-content-center'>
-                    <Card
-                        category={"NEWS"}
-                        title={"The adoption of AI is growing globally"}
-                        description={"The adoption of AI is growing globally"}
-                        image={"cards/card7.png"}
-                        text_color={"text-white"} />
-                </div>
+            <div ref={cardSectionRef} className=' mt-36 mb-48 mx-15  gap-3'>
+                <motion.div
+                    className='grid grid-cols-4'
+                    variants={{
+                        visible: { opacity: 1, y: 0 },
+                        hidden: { opacity: 0, y: 100 }
+                    }}
+                    initial="hidden"
+                    animate={controls}
+                    transition={{ duration: 1.0 }}
+                >
+                    <div className='grid place-content-center'>
+                        <Card
+                            category={"INSIGHT"}
+                            title={"Old World vs New World"}
+                            description={"Discover how application and data reporting used to be and how it could be"}
+                            image={"cards/card1.png"}
+                            text_color={"text-white"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Cardv2
+                            category={"INSIGHT"}
+                            title={"The Foundation for Insight Driven Organizations"}
+                            description={"Learn how we build the basic to build for today and build for tomorrow"}
+                            image={"cards/card8.png"}
+                            text_color={"text-black"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Card
+                            category={"INDEPENDENT CASE STUDY"}
+                            title={"Discover how Optik Melawai develop their business insight"}
+                            description={"Discover how Optik Melawai develop their business insight"}
+                            image={"cards/card3.png"}
+                            text_color={"text-black"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Cardv2
+                            category={"INSIGHT"}
+                            title={"How to tackle digital transformation issues with change management"}
+                            description={"How to tackle digital transformation issues with change management"}
+                            image={"cards/card9.png"}
+                            text_color={"text-black"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Card
+                            category={"INSIGHT"}
+                            title={"Let’s visualize traditional AI/ML & Generative AI use case in HR Industry"}
+                            description={"Let’s visualize traditional AI/ML & Generative AI use case in HR Industry"}
+                            image={"cards/card5.png"}
+                            text_color={"text-black"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Card
+                            category={"INDEPENDENT CASE STUDY"}
+                            title={"Learn how we use automation to automate all of our HR Process"}
+                            description={"Learn how we use automation to automate all of our HR Process"}
+                            image={"cards/card6.png"}
+                            text_color={"text-white"} />
+                    </div>
+                    <div className='grid place-content-center'>
+                        <Card
+                            category={"NEWS"}
+                            title={"The adoption of AI is growing globally"}
+                            description={"The adoption of AI is growing globally"}
+                            image={"cards/card7.png"}
+                            text_color={"text-white"} />
+                    </div>
+                </motion.div>
 
             </div>
 
