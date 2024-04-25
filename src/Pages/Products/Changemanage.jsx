@@ -9,6 +9,18 @@ import Dropdown from '../../Components/Dropdown';
 
 function Changemanage() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
 
         <div className='bg-black relative  '>
@@ -22,10 +34,13 @@ function Changemanage() {
                     title="Change Management"
                     description="Navigating the complexities of organizational change requires a comprehensive, research-backed approach. Integrating insights from ten esteemed institutions, our Change Management solution embodies a holistic strategy designed to guide businesses through transformation with agility and resilience. These insights underscore the multifaceted nature of change management, highlighting its critical role in ensuring successful organizational adaptation and growth."
                     image={"/Hero3.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
+            
+            <div className='h-[180px]'></div>
 
-            <div className='mx-15 mt-72'>
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={""}

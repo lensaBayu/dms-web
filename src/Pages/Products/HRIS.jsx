@@ -10,6 +10,18 @@ import Dropdown from '../../Components/Dropdown';
 
 function HRIS() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
 
         <div className='bg-black relative  '>
@@ -23,10 +35,13 @@ function HRIS() {
                     title="Human Resource Information System"
                     description="In an era marked by rapid technological advancement and shifting workforce dynamics, a Human Resources Information System (HRIS) stands as a pivotal foundation for modern HR management. Drawing upon a synthesis of research and insights from leading institutions, our HRIS solution is crafted to offer unparalleled support in managing and optimizing human resources functions."
                     image={"/Hero1.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
+            
+            <div className='h-[180px]'></div>
 
-            <div className='mx-15 mt-72'>
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Enhance recruitment efficiency"}

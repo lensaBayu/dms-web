@@ -10,6 +10,18 @@ import Dropdown from '../../Components/Dropdown';
 
 function Techtrans() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
 
         <div className='bg-black relative  '>
@@ -23,10 +35,13 @@ function Techtrans() {
                     title="Technology Transformation"
                     description="In an era where technology rapidly reshapes the boundaries of what's possible, Technology Transformation emerges as the cornerstone for businesses aiming to thrive in a digital-first world. Drawing from insights by leading institutions such as McKinsey & Company, which underscores the significant value addition through digital transformation in operational efficiency and market competitiveness, and insights from Deloitte about the critical role of technology in enabling business resilience and innovation, it's evident that technology transformation is not just beneficial but essential for modern businesses."
                     image={"/Hero7.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
+            
+            <div className='h-[180px]'></div>
 
-            <div className='mx-15 mt-72'>
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Accelerated Digital Innovation"}
