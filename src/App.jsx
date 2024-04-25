@@ -7,11 +7,12 @@ import Changemanage from "./Pages/Products/Changemanage"
 import Businessprocess from "./Pages/Products/Businessprocess"
 import Strategicmanage from "./Pages/Products/Strategicmanage"
 import Techtrans from "./Pages/Products/Techtrans"
+import AboutUs from "./Pages/WhoWeAre/AboutUs"
 
 function App() {
 
   return (
-    <div className="bg-black h-screen">
+    <div className="bg-black h-screen ">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/product/hris" element={<HRIS />} />
@@ -21,6 +22,7 @@ function App() {
         <Route path="/product/businessprocess" element={<Businessprocess />} />
         <Route path="/product/strategicmanage" element={<Strategicmanage />} />
         <Route path="/product/techtrans" element={<Techtrans />} />
+        <Route path="/whoweare/aboutus" element={<AboutUs />} />
       </Routes>
     </div>
   )
