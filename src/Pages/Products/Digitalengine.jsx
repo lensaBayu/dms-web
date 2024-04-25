@@ -10,6 +10,18 @@ import Dropdown from '../../Components/Dropdown';
 
 function Digitalengine() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
 
         <div className='bg-black relative  '>
@@ -23,10 +35,13 @@ function Digitalengine() {
                     title="Digital Engineering & Manufacturing"
                     description="According to Gartner, companies that have adopted digital manufacturing strategies have seen up to a 20% increase in production efficiency, alongside a reduction in operational costs by as much as 30%. Furthermore, the integration of data analytics and ERP systems has been pivotal in achieving up to a 25% improvement in customer satisfaction due to enhanced product quality and faster delivery times."
                     image={"/Hero5.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
+            
+            <div className='h-[180px]'></div>
 
-            <div className='mx-15 mt-72'>
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Increased Production Efficiency"}

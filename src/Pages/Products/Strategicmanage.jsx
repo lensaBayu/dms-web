@@ -10,6 +10,18 @@ import Dropdown from '../../Components/Dropdown';
 
 function Strategicmanage() {
     const [showOverlay, setShowOverlay] = React.useState(false);
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+            console.log("Scroll Position: ", window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
 
         <div className='bg-black relative  '>
@@ -23,10 +35,13 @@ function Strategicmanage() {
                     title="Strategic Managed Service"
                     description="Navigating the complexities of the modern business environment requires not just innovation, but strategic foresight and precision execution. Our Strategic Managed Service solution embodies this approach, offering businesses a seamless integration of strategic planning and operational excellence. Leveraging the latest industry insights, such as those from Gartner, which highlight the pivotal role of strategic services in achieving up to a 40% increase in operational efficiency and a 35% reduction in IT operational costs, our service is designed to propel your business forward"
                     image={"/Hero6.png"}
+                    scrollPosition={scrollPosition}
                 />
             </div>
 
-            <div className='mx-15 mt-72'>
+            <div className='h-[180px]'></div>
+            
+            <div className='mx-15 mt-96'>
                 <Dropdown
                     Number={"01"}
                     Title={"Enhanced Operational Efficiency"}
