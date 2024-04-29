@@ -39,7 +39,7 @@ const Navbar = ({ setShowOverlay }) => {
 
     return (
         <>
-            <div className='text-white flex justify-between mx-15 pt-7 pb-4'>
+            <div className='text-white flex justify-between mx-15 pt-7 pb-4 h-[92px]'>
                 <Link to={"/"} >
                     <div className=''><img src="/Logo DMS.png" alt="Logo" /></div>
                 </Link>

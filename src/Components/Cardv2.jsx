@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RiArrowRightSLine } from "react-icons/ri";
 
 
-const Card = ({ category, title, description, image, text_color }) => {
+const Cardv2 = ({ category, title, description, image, text_color }) => {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -37,4 +37,4 @@ const Card = ({ category, title, description, image, text_color }) => {
     );
 }
 
-export default Card;
+export default Cardv2;
