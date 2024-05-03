@@ -64,9 +64,12 @@ const Navbar = ({ setShowOverlay }) => {
             {/* </div> */}
           </div>
           <div className="grid place-content-center cursor-pointer">
-            <div className="flex gap-1">
+            <div className="flex gap-1" onClick={() => toggleDropdown("insights")}>
               <div>Insight</div>
-              <div className="grid place-content-center text-xl"></div>
+              <div className="grid place-content-center text-xl">
+                <RiArrowDownSLine />
+
+              </div>
             </div>
           </div>
           <div className="grid place-content-center cursor-pointer">
@@ -127,6 +130,60 @@ const Navbar = ({ setShowOverlay }) => {
             <Link to={"/product/hris"}>
               <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
                 Human Resources Information System
+              </div>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showDropdown === "insights" && (
+          <motion.div
+            ref={dropdownRef}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeIn" }}
+            className=" bg-white bg-opacity-20 px-24 py-14 grid grid-cols-4  mt-5 text-white font-thin backdrop-blur-2xl gap-10"
+          >
+            <Link to={"/insight/Revolutionizing-Human-Resources-with-Artificial-Intelligence"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                AI for HR
+              </div>
+            </Link>
+            <Link to={"/insight/Streamlining-Human-Resources-with-Robotic-Process-Automation"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                RPA for HR
+              </div>
+            </Link>
+            <Link to={"/insight/Navigating-Change-for-Future-Ready-Success"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Organizational Transformation
+              </div>
+            </Link>
+            <Link to={"/insight/Strategies-for-the-Modern-Workplace"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Workforce Management
+              </div>
+            </Link>
+            <Link to={"/insight/The-Transformational-Power-of-Intelligent-Automation"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Automation in The Workplace
+              </div>
+            </Link>
+            <Link to={"/insight/Navigating-Digital-Transformation-and-Change-Management"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Digital Transformation
+              </div>
+            </Link>
+            <Link to={"/insight/Transforming-Human-Capital-Management"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Big Data for HR
+              </div>
+            </Link>
+            <Link to={"/insight/The-Cost-and-Time-Benefits-of-Outsourcing"}>
+              <div className="py-2 hover:underline hover:font-normal ease-in-out cursor-pointer duration-200">
+                Talent Recruitment
               </div>
             </Link>
           </motion.div>
