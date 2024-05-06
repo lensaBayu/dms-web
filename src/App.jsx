@@ -16,6 +16,7 @@ import Insight5 from "./Pages/Insights/Insight5"
 import Insight6 from "./Pages/Insights/Insight6"
 import Insight7 from "./Pages/Insights/Insight7"
 import Insight8 from "./Pages/Insights/Insight8"
+import Career from "./Pages/Careers/Career"
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/insight/Transforming-Human-Capital-Management" element={<Insight6 />} />
         <Route path="/insight/The-Cost-and-Time-Benefits-of-Outsourcing" element={<Insight7 />} />
         <Route path="/insight/Strategies-for-the-Modern-Workplace" element={<Insight8 />} />
+        <Route path="/careers" element={<Career />} />
       </Routes>
     </div>
   )

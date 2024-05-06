@@ -20,6 +20,12 @@ export default {
         '15': '60px',    // Example custom margin size
         // Add more custom margin sizes as needed
       },
+
+      colors: {
+        'aqua': '#47ffff',
+        'babyaqua': '#c6ffff'
+      },
+
     },
   },
   plugins: [require("daisyui")],
