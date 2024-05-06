@@ -38,8 +38,16 @@ function Changemanage() {
       </div>
 
       <div className="mx-15 mt-32">
-        <Dropdown Number={"01"} Title={""} percent={""} description={""} />
-        <Dropdown Number={""} Title={""} percent={""} description={""} border={false} />
+        <Dropdown Number={"01"} Title={"The engine of successful change"} percent={"+30%"} description={"Harvard Business Review emphasizes the importance of leadership in change management, noting that effective leadership can increase project success rates by up to 30%."} />
+        <Dropdown Number={"02"} Title={"Focuses on employee engagement"} percent={"+22%"} description={"MIT Sloan Management Review highlights the role of employee engagement in change initiatives, revealing that organizations with high engagement levels see 22% higher success in change efforts."} />
+        <Dropdown Number={"03"} Title={"Building bridges for stakeholder buy-In"} percent={"+50%"} description={"Stanford Social Innovation Review points out the significance of clear communication, with research indicating that transparent and consistent communication can improve stakeholder buy-in by up to 50%."} />
+        <Dropdown Number={"04"} Title={"Doubling your odds of change success"} percent={""} description={"McKinsey & Company underscores the value of a structured approach to change, which can double the odds of success of change programs."} />
+        <Dropdown Number={"05"} Title={"Identifies the critical role of culture"} percent={"+33%"} description={"Deloitte identifies the critical role of culture in change management, demonstrating that cultural alignment can enhance the effectiveness of change initiatives by up to 33%"} />
+        <Dropdown Number={"06"} Title={"The importance of adaptability"} percent={"+24%"} description={"The Wharton School discusses the importance of adaptability, showing that flexible organizations are 24% more likely to outperform their peers in change efforts."} />
+        <Dropdown Number={"07"} Title={"Tools for change implementation "} percent={"+20%"} description={"Boston Consulting Group (BCG) stresses the impact of digital tools in facilitating change, with organizations leveraging digital technologies seeing a 20% increase in change program efficiency."} />
+        <Dropdown Number={"08"} Title={"Optimizing change with analytics"} percent={"+25%"} description={"Bain & Company focuses on the power of data analytics in change management, finding that data-driven strategies can lead to a 25% improvement in achieving change objectives."} />
+        <Dropdown Number={"09"} Title={"Partnering for change success"} percent={"+30%"} description={"Oxford Economics points to the importance of stakeholder engagement, where effective involvement strategies can lead to a 30% higher chance of change success."} />
+        <Dropdown Number={"10"} Title={"The change through continuous development"} percent={"+34%"} description={"PricewaterhouseCoopers (PwC) showcases the need for continuous learning, with organizations that prioritize learning and development experiencing 34% more successful change initiatives."} />
       </div>
 
       <div className=" mt-36 mb-48 mx-15 grid grid-cols-4 gap-3">
