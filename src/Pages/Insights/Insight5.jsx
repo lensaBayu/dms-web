@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Cardv2 from '../../Components/Cardv2';
+import CommentForm from '../../Components/CommentForm'
 
 const Insight5 = () => {
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -14,7 +15,7 @@ const Insight5 = () => {
             <nav className='absolute top-0 left-0 right-0 z-20 '>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
-            
+
             <div className=' h-[200px]'></div>
 
             <div className='px-[285px] text-neutral-200 leading-none'>
@@ -25,7 +26,7 @@ const Insight5 = () => {
                 </div>
                 <div className='h-[75px] '></div>
                 <div className='font-thin leading-normal text-[18px] '>
-                Organizational transformation involves a fundamental change in how a company operates and delivers value to its customers. Unlike incremental changes or adjustments, transformation requires a complete overhaul of business processes, corporate culture, and operational models. This holistic approach is essential for companies facing disruptive market forces, technological advancements, or internal challenges that necessitate a profound shift in strategy and execution. Let’s explore the key elements of successful organizational transformation and how companies can navigate this complex journey.
+                    Organizational transformation involves a fundamental change in how a company operates and delivers value to its customers. Unlike incremental changes or adjustments, transformation requires a complete overhaul of business processes, corporate culture, and operational models. This holistic approach is essential for companies facing disruptive market forces, technological advancements, or internal challenges that necessitate a profound shift in strategy and execution. Let’s explore the key elements of successful organizational transformation and how companies can navigate this complex journey.
                 </div>
                 <div className='h-[101px]'></div>
 
@@ -33,8 +34,8 @@ const Insight5 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> Understanding Organizational Transformation</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        At its core, organizational transformation is about aligning a company’s operations, structure, and strategy with its long-term vision and the evolving demands of the market. It’s a process that involves rethinking product lines, re-engineering processes, adopting new technologies, and most critically, fostering a culture that embraces change and innovation. The goal is to enhance agility, efficiency, and competitiveness, positioning the company for sustainable growth in a rapidly changing business environment.
+                        <div className='pb-5 text-pretty' >
+                            At its core, organizational transformation is about aligning a company’s operations, structure, and strategy with its long-term vision and the evolving demands of the market. It’s a process that involves rethinking product lines, re-engineering processes, adopting new technologies, and most critically, fostering a culture that embraces change and innovation. The goal is to enhance agility, efficiency, and competitiveness, positioning the company for sustainable growth in a rapidly changing business environment.
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@ const Insight5 = () => {
 
                     <div className=''>
                         <ul className='font-thin leading-normal text-[18px] list-decimal px-5'>
-                    
+
                             <li>Strategic Vision: Successful transformation starts with a clear, compelling vision of the future. This vision should articulate the company’s aspirations and the strategic direction required to achieve them, serving as a guiding star for the entire transformation process.</li>
                             <br />
                             <li>Leadership Commitment: Strong, committed leadership is crucial. Leaders must be fully invested in the transformation, demonstrating unwavering support and a willingness to drive change. They must communicate openly, set clear expectations, and lead by example.</li>
@@ -70,7 +71,7 @@ const Insight5 = () => {
 
                     <div className=''>
                         <ul className='font-thin leading-normal text-[18px] list-disc px-5'>
-                        
+
                             <li>Navigating organizational transformation requires careful planning, strong leadership, and a willingness to take calculated risks. Here are some strategies to consider:</li>
                             <br />
                             <li>Develop a Roadmap: Create a detailed transformation roadmap that outlines key milestones, timelines, and responsibilities. This roadmap should be flexible enough to adapt to unforeseen challenges and opportunities.</li>
@@ -90,8 +91,8 @@ const Insight5 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> Conclusion</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Organizational transformation is a complex, challenging journey, but it’s also an opportunity to reimagine and reinvent the business for long-term success. By focusing on strategic vision, leadership, cultural change, and continuous improvement, companies can navigate the uncertainties of transformation and emerge stronger, more agile, and better equipped to thrive in the future. The key is to embrace change as an opportunity, not a threat, and to view transformation as an ongoing journey rather than a destination.
+                        <div className='pb-5 text-pretty' >
+                            Organizational transformation is a complex, challenging journey, but it’s also an opportunity to reimagine and reinvent the business for long-term success. By focusing on strategic vision, leadership, cultural change, and continuous improvement, companies can navigate the uncertainties of transformation and emerge stronger, more agile, and better equipped to thrive in the future. The key is to embrace change as an opportunity, not a threat, and to view transformation as an ongoing journey rather than a destination.
                         </div>
                     </div>
                 </div>
@@ -99,9 +100,15 @@ const Insight5 = () => {
 
             </div>
 
-                <div className='h-[240px]'></div>
+            <div className='h-[208px]'></div>
 
-                <div>
+            <div className='px-[80px]'>
+                <CommentForm />
+            </div>
+
+            <div className='h-[240px]'></div>
+
+            <div>
                 <div className='mx-20 text-[25px] font-medium text-neutral-50'>More about AI for HR</div>
                 <div className=' mx-15 grid grid-cols-4 gap-3'>
                     <div className='grid place-content-center'>
@@ -139,11 +146,11 @@ const Insight5 = () => {
                 </div>
             </div>
 
-                <footer>
-                    <Footer />
-                </footer>
+            <footer>
+                <Footer />
+            </footer>
 
-            </div >
+        </div >
 
 
 

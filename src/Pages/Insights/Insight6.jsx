@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Cardv2 from '../../Components/Cardv2';
+import CommentForm from '../../Components/CommentForm'
 
 const Insight5 = () => {
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -14,7 +15,7 @@ const Insight5 = () => {
             <nav className='absolute top-0 left-0 right-0 z-20 '>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
-            
+
             <div className=' h-[200px]'></div>
 
             <div className='px-[285px] text-neutral-200 leading-none'>
@@ -25,7 +26,7 @@ const Insight5 = () => {
                 </div>
                 <div className='h-[75px] '></div>
                 <div className='font-thin leading-normal text-[18px] '>
-                The integration of Big Data analytics into Human Resources (HR) is revolutionizing the field of human capital management. By harnessing the power of large data sets to uncover insights, patterns, and trends, HR departments can make more informed decisions, enhance employee engagement, and improve overall organizational performance. This article explores the impact of Big Data in HR, highlighting its applications, benefits, and strategies for effective implementation.
+                    The integration of Big Data analytics into Human Resources (HR) is revolutionizing the field of human capital management. By harnessing the power of large data sets to uncover insights, patterns, and trends, HR departments can make more informed decisions, enhance employee engagement, and improve overall organizational performance. This article explores the impact of Big Data in HR, highlighting its applications, benefits, and strategies for effective implementation.
                 </div>
                 <div className='h-[101px]'></div>
 
@@ -33,8 +34,8 @@ const Insight5 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> The Impact of Big Data on HR</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Big Data refers to the vast volumes of structured and unstructured data generated from various sources within and outside an organization. In HR, this data can come from employee surveys, performance metrics, online engagement activities, recruitment processes, and more. The key to leveraging Big Data is not just in its volume but in processing and analyzing this data to make evidence-based decisions.
+                        <div className='pb-5 text-pretty' >
+                            Big Data refers to the vast volumes of structured and unstructured data generated from various sources within and outside an organization. In HR, this data can come from employee surveys, performance metrics, online engagement activities, recruitment processes, and more. The key to leveraging Big Data is not just in its volume but in processing and analyzing this data to make evidence-based decisions.
                         </div>
                     </div>
                 </div>
@@ -44,8 +45,8 @@ const Insight5 = () => {
                     <div className='text-[39px]  font-medium pb-5'>Application of Big Data in HR</div>
 
                     <div className=''>
-                        <div className='pb-5 text-pretty' >  
-                        Talent Acquisition and Recruitment: Big Data analytics can significantly enhance the recruitment process by analyzing data from resumes, job applications, and social media profiles to identify the best candidates. Predictive analytics can also forecast future hiring needs and identify talent gaps.
+                        <div className='pb-5 text-pretty' >
+                            Talent Acquisition and Recruitment: Big Data analytics can significantly enhance the recruitment process by analyzing data from resumes, job applications, and social media profiles to identify the best candidates. Predictive analytics can also forecast future hiring needs and identify talent gaps.
                         </div>
                         <ul className='font-thin leading-normal text-[18px] list-disc px-5'>
 
@@ -69,7 +70,7 @@ const Insight5 = () => {
 
                     <div className=''>
                         <ul className='font-thin leading-normal text-[18px] list-disc px-5'>
-                        
+
                             <li>Improved Decision Making: With access to a wealth of data, HR professionals can make more informed, evidence-based decisions.</li>
                             <br />
                             <li>Enhanced Efficiency: Automation of data analysis can save time and resources, allowing HR to focus on strategic initiatives.</li>
@@ -108,8 +109,8 @@ const Insight5 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> Conclusion</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Big Data in HR opens up a new frontier for managing and optimizing human capital. By leveraging the insights derived from Big Data analytics, HR departments can transform their processes, enhance employee experiences, and contribute more strategically to organizational success. As technology evolves, so too will the possibilities for Big Data in HR, promising even greater insights and innovations in the future.
+                        <div className='pb-5 text-pretty' >
+                            Big Data in HR opens up a new frontier for managing and optimizing human capital. By leveraging the insights derived from Big Data analytics, HR departments can transform their processes, enhance employee experiences, and contribute more strategically to organizational success. As technology evolves, so too will the possibilities for Big Data in HR, promising even greater insights and innovations in the future.
                         </div>
                     </div>
                 </div>
@@ -117,9 +118,15 @@ const Insight5 = () => {
 
             </div>
 
-                <div className='h-[240px]'></div>
+            <div className='h-[208px]'></div>
 
-                <div>
+            <div className='px-[80px]'>
+                <CommentForm />
+            </div>
+
+            <div className='h-[240px]'></div>
+
+            <div>
                 <div className='mx-20 text-[25px] font-medium text-neutral-50'>More about AI for HR</div>
                 <div className=' mx-15 grid grid-cols-4 gap-3'>
                     <div className='grid place-content-center'>
@@ -157,11 +164,11 @@ const Insight5 = () => {
                 </div>
             </div>
 
-                <footer>
-                    <Footer />
-                </footer>
+            <footer>
+                <Footer />
+            </footer>
 
-            </div >
+        </div >
 
 
 

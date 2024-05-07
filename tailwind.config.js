@@ -26,6 +26,10 @@ export default {
         'babyaqua': '#c6ffff'
       },
 
+      transitionProperty: {
+        'height': 'height',
+      },
+
     },
   },
   plugins: [require("daisyui")],
