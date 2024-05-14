@@ -3,6 +3,8 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Cardv2 from '../../Components/Cardv2';
+import CommentForm from '../../Components/CommentForm'
+
 
 const Insight4 = () => {
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -14,7 +16,7 @@ const Insight4 = () => {
             <nav className='absolute top-0 left-0 right-0 z-20 '>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
-            
+
             <div className=' h-[200px]'></div>
 
             <div className='px-[285px] text-neutral-200 leading-none'>
@@ -25,7 +27,7 @@ const Insight4 = () => {
                 </div>
                 <div className='h-[75px] '></div>
                 <div className='font-thin leading-normal text-[18px] '>
-                In an era marked by rapid technological evolution and shifting market dynamics, digital transformation has emerged as a crucial strategy for businesses seeking to enhance their competitiveness and resilience. However, the journey towards digitalization encompasses far more than the mere adoption of new technologies; it necessitates a profound transformation of corporate culture, processes, and customer interactions. This transformation is inherently linked with change management, a structured approach to shifting individuals, teams, and organizations from a current state to a desired future state. Let’s delve into how digital transformation and change management intersect and explore strategies for navigating this complex yet rewarding landscape.
+                    In an era marked by rapid technological evolution and shifting market dynamics, digital transformation has emerged as a crucial strategy for businesses seeking to enhance their competitiveness and resilience. However, the journey towards digitalization encompasses far more than the mere adoption of new technologies; it necessitates a profound transformation of corporate culture, processes, and customer interactions. This transformation is inherently linked with change management, a structured approach to shifting individuals, teams, and organizations from a current state to a desired future state. Let’s delve into how digital transformation and change management intersect and explore strategies for navigating this complex yet rewarding landscape.
                 </div>
                 <div className='h-[101px]'></div>
 
@@ -33,8 +35,8 @@ const Insight4 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> The Essence of Digital Transformation</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Digital transformation involves integrating digital technology into all areas of a business, fundamentally changing how you operate and deliver value to customers. It's also a cultural change that requires organizations to continually challenge the status quo, experiment, and get comfortable with failure. This can mean anything from adopting cloud computing to enable more agile business practices, to leveraging big data for better decision-making, to implementing AI and machine learning for enhanced customer experiences.
+                        <div className='pb-5 text-pretty' >
+                            Digital transformation involves integrating digital technology into all areas of a business, fundamentally changing how you operate and deliver value to customers. It's also a cultural change that requires organizations to continually challenge the status quo, experiment, and get comfortable with failure. This can mean anything from adopting cloud computing to enable more agile business practices, to leveraging big data for better decision-making, to implementing AI and machine learning for enhanced customer experiences.
                         </div>
                     </div>
                 </div>
@@ -44,8 +46,8 @@ const Insight4 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> The Critical Role of Change Management</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Change management in the context of digital transformation involves preparing, supporting, and helping individuals to adopt and embrace changes in their current environment. The goal is to drive successful adoption and utilization of new technologies and processes, ensuring that organizational objectives are met and that the transformation delivers the expected benefits.
+                        <div className='pb-5 text-pretty' >
+                            Change management in the context of digital transformation involves preparing, supporting, and helping individuals to adopt and embrace changes in their current environment. The goal is to drive successful adoption and utilization of new technologies and processes, ensuring that organizational objectives are met and that the transformation delivers the expected benefits.
                         </div>
                     </div>
                 </div>
@@ -79,20 +81,24 @@ const Insight4 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> Conclusion</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Digital transformation and change management are intrinsically linked, with the success of the former depending heavily on the latter. By approaching digital transformation with a comprehensive change management plan, organizations can navigate the complexities of modernization, mitigate resistance, and maximize the benefits of digital initiatives. Ultimately, the goal is to create a flexible, responsive organization that is not only equipped to compete in today’s digital age but is also prepared for the uncertainties of tomorrow. Embracing change, therefore, becomes not just a necessity, but a strategic advantage.
+                        <div className='pb-5 text-pretty' >
+                            Digital transformation and change management are intrinsically linked, with the success of the former depending heavily on the latter. By approaching digital transformation with a comprehensive change management plan, organizations can navigate the complexities of modernization, mitigate resistance, and maximize the benefits of digital initiatives. Ultimately, the goal is to create a flexible, responsive organization that is not only equipped to compete in today’s digital age but is also prepared for the uncertainties of tomorrow. Embracing change, therefore, becomes not just a necessity, but a strategic advantage.
                         </div>
                     </div>
                 </div>
                 <div className='h-[101px]'></div>
 
-
-
             </div>
 
-                <div className='h-[240px]'></div>
+            <div className='h-[208px]'></div>
 
-                <div>
+            <div className='px-[80px]'>
+                <CommentForm />
+            </div>
+
+            <div className='h-[240px]'></div>
+
+            <div>
                 <div className='mx-20 text-[25px] font-medium text-neutral-50'>More about AI for HR</div>
                 <div className=' mx-15 grid grid-cols-4 gap-3'>
                     <div className='grid place-content-center'>
@@ -130,11 +136,11 @@ const Insight4 = () => {
                 </div>
             </div>
 
-                <footer>
-                    <Footer />
-                </footer>
+            <footer>
+                <Footer />
+            </footer>
 
-            </div >
+        </div >
 
 
 

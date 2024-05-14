@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Cardv2 from '../../Components/Cardv2';
+import CommentForm from '../../Components/CommentForm';
 
 const Insight2 = () => {
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -121,6 +122,12 @@ const Insight2 = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='h-[208px]'></div>
+
+            <div className='px-[80px]'>
+                <CommentForm />
             </div>
 
             <div className='h-[240px]'></div>

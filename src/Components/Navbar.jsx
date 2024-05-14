@@ -74,10 +74,12 @@ const Navbar = ({ setShowOverlay }) => {
           </div>
           <div className="grid place-content-center cursor-pointer">
             <div className="flex gap-1" onClick={() => toggleDropdown("career")}>
-              <div>Careers</div>
-              <div className="grid place-content-center text-xl">
+              <Link to={'/careers'}>
+                <div>Careers</div>
+              </Link>
+              {/* <div className="grid place-content-center text-xl">
                 <RiArrowDownSLine />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Cardv2 from '../../Components/Cardv2';
+import CommentForm from '../../Components/CommentForm'
 
 const Insight7 = () => {
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -14,7 +15,7 @@ const Insight7 = () => {
             <nav className='absolute top-0 left-0 right-0 z-20 '>
                 <Navbar setShowOverlay={setShowOverlay} />
             </nav>
-            
+
             <div className=' h-[200px]'></div>
 
             <div className='px-[285px] text-neutral-200 leading-none'>
@@ -25,7 +26,7 @@ const Insight7 = () => {
                 </div>
                 <div className='h-[75px] '></div>
                 <div className='font-thin leading-normal text-[18px] '>
-                Workforce management (WFM) is crucial in ensuring that an organization has the right personnel, with the right skills, at the right time, to achieve its business goals. It encompasses a wide range of activities, from staffing and scheduling to performance management and compliance with labor laws. In today’s fast-paced and ever-changing work environment, optimizing workforce management has become more challenging yet increasingly important. Let's delve into effective strategies for modern workforce management that can help organizations enhance productivity, improve employee satisfaction, and achieve operational excellence.
+                    Workforce management (WFM) is crucial in ensuring that an organization has the right personnel, with the right skills, at the right time, to achieve its business goals. It encompasses a wide range of activities, from staffing and scheduling to performance management and compliance with labor laws. In today’s fast-paced and ever-changing work environment, optimizing workforce management has become more challenging yet increasingly important. Let's delve into effective strategies for modern workforce management that can help organizations enhance productivity, improve employee satisfaction, and achieve operational excellence.
                 </div>
                 <div className='h-[101px]'></div>
 
@@ -33,8 +34,8 @@ const Insight7 = () => {
                     <div className='text-[39px] leading-none font-medium pb-5'> Understanding Work Force Management</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Workforce management is a comprehensive approach that aims to maximize performance levels and competency for an organization. It involves accurately forecasting labor requirements, managing staff schedules, ensuring compliance with labor regulations, and analyzing workforce data to improve operational efficiency.
+                        <div className='pb-5 text-pretty' >
+                            Workforce management is a comprehensive approach that aims to maximize performance levels and competency for an organization. It involves accurately forecasting labor requirements, managing staff schedules, ensuring compliance with labor regulations, and analyzing workforce data to improve operational efficiency.
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@ const Insight7 = () => {
 
                     <div className=''>
                         <ul className='font-thin leading-normal text-[18px] list-decimal px-5'>
-                    
+
                             <li>Leverage Technology for Smart Scheduling: Advanced scheduling software can automate the process of creating and managing employee schedules, taking into account variables such as demand forecasts, employee availability, and skill sets. This not only saves time but also helps in optimizing staff allocation to meet business needs.</li>
                             <br />
                             <li>Embrace Flexibility: Flexible work arrangements, such as remote work, flexible hours, and part-time roles, can help attract and retain top talent. Offering flexibility can also improve job satisfaction and work-life balance, leading to higher productivity.</li>
@@ -66,13 +67,13 @@ const Insight7 = () => {
                     </div>
                 </div>
 
-                
+
                 <div className=' leading-normal'>
                     <div className='text-[39px] leading-none font-medium pb-5'> Conclusion</div>
 
                     <div className='font-thin leading-normal text-[18px]'>
-                        <div className='pb-5 text-pretty' >  
-                        Effective workforce management is essential for the success of any organization. By adopting these strategies, businesses can create a more productive, satisfied, and engaged workforce that is well-equipped to meet current and future challenges. Leveraging technology, focusing on employee development and engagement, and using data for informed decision-making are key components of modern workforce management. As the workplace continues to evolve, so too will the strategies for managing and optimizing the workforce, requiring ongoing adaptation and innovation from HR professionals.
+                        <div className='pb-5 text-pretty' >
+                            Effective workforce management is essential for the success of any organization. By adopting these strategies, businesses can create a more productive, satisfied, and engaged workforce that is well-equipped to meet current and future challenges. Leveraging technology, focusing on employee development and engagement, and using data for informed decision-making are key components of modern workforce management. As the workplace continues to evolve, so too will the strategies for managing and optimizing the workforce, requiring ongoing adaptation and innovation from HR professionals.
                         </div>
                     </div>
                 </div>
@@ -80,9 +81,15 @@ const Insight7 = () => {
 
             </div>
 
-                <div className='h-[240px]'></div>
+            <div className='h-[208px]'></div>
 
-                <div>
+            <div className='px-[80px]'>
+                <CommentForm />
+            </div>
+
+            <div className='h-[240px]'></div>
+
+            <div>
                 <div className='mx-20 text-[25px] font-medium text-neutral-50'>More about AI for HR</div>
                 <div className=' mx-15 grid grid-cols-4 gap-3'>
                     <div className='grid place-content-center'>
@@ -120,11 +127,11 @@ const Insight7 = () => {
                 </div>
             </div>
 
-                <footer>
-                    <Footer />
-                </footer>
+            <footer>
+                <Footer />
+            </footer>
 
-            </div >
+        </div >
 
 
 
